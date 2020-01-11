@@ -72,6 +72,9 @@ module.exports = {
       ****************************************************************************/
       // ssl: true,
 
+      adapter: 'sails-mongo',
+      url: process.env.MONGO_URL
+
     },
 
   },
