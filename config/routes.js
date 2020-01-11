@@ -9,6 +9,10 @@
  */
 
 module.exports.routes = {
-
+  'GET /contact': 'ContactController.find',
+  'GET /contact/:id': 'ContactController.findOne',
+  'POST /contact': 'ContactController.create',
+  'PUT /contact/:id' : 'ContactController.update',  
+  'DELETE /contact/:id' : 'ContactController.destroy'
 
 };
