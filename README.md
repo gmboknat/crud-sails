@@ -1,6 +1,19 @@
 # crud-sails
 
-a [Sails v1](https://sailsjs.com) application
+a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD operation.
+
+
+
+### API Endpoints: 
+
+
+|     Method     |           Endpoint            |       Description |
+|----------------|-------------------------------|-------------------------------|
+|GET             |/contact         | Get all contacts |
+|GET              |/contact/:id           | Get a contact by id |
+|POST           |/contact      | Create a new contact |
+|PUT            |/contact/:id   | Update a contact   |
+|DELETE            |/contact/:id   | Delete a contact by id |
 
 
 ### Links
