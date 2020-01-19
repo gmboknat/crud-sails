@@ -1,7 +1,6 @@
 # crud-sails
 
-a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD operation.
-
+a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD operation. (https://crud-sails.herokuapp.com/)
 
 
 ### API Endpoints: 
