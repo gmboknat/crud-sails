@@ -8,7 +8,11 @@
 module.exports = {
   find: async (req, res) => {
     console.log('find');
-    let contacts = await Contact.find();
+    console.log('req.query', req.query);
+    let contacts = await Contact.find({
+      skip: req.query.skip || 0,
+      limit: req.query.limit || 10,
+    });
     return res.send(contacts);
   },
   findOne: async (req, res) => {
