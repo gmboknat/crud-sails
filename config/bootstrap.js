@@ -104,6 +104,60 @@ module.exports.bootstrap = async function() {
       email: 'sandra.battle@email.com',
       phone: '+1 (942) 496-2292',
     },
+    {
+      firstname: 'Hope',
+      lastname: 'Bates',
+      email: 'hope.bates@example.com',
+      phone: '+1 (812) 589-2659',
+    },
+    {
+      firstname: 'Hull',
+      lastname: 'Oneal',
+      email: 'hull.oneal@example.com',
+      phone: '+1 (815) 597-3847',
+    },
+    {
+      firstname: 'Case',
+      lastname: 'Fields',
+      email: 'case.fields@example.com',
+      phone: '+1 (960) 572-3291',
+    },
+    {
+      firstname: 'Carr',
+      lastname: 'Justice',
+      email: 'carr.justice@example.com',
+      phone: '+1 (843) 581-3997',
+    },
+    {
+      firstname: 'Julianne',
+      lastname: 'Sears',
+      email: 'julianne.sears@example.com',
+      phone: '+1 (833) 548-3594',
+    },
+    {
+      firstname: 'Maureen',
+      lastname: 'Ortega',
+      email: 'maureen.ortega@example.com',
+      phone: '+1 (982) 436-3269',
+    },
+    {
+      firstname: 'Gwen',
+      lastname: 'Farrell',
+      email: 'gwen.farrell@example.com',
+      phone: '+1 (813) 406-2067',
+    },
+    {
+      firstname: 'Pate',
+      lastname: 'Cortez',
+      email: 'pate.cortez@example.com',
+      phone: '+1 (883) 447-3175',
+    },
+    {
+      firstname: 'Reyes',
+      lastname: 'Acosta',
+      email: 'reyes.acosta@example.com',
+      phone: '+1 (819) 582-3048',
+    },
   ]);
   // ```
 };
