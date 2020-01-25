@@ -9,11 +9,15 @@ module.exports = {
   find: async (req, res) => {
     console.log('find');
     console.log('req.query', req.query);
+    let count = await Contact.count();
     let contacts = await Contact.find({
       skip: req.query.skip || 0,
       limit: req.query.limit || 10,
     });
-    return res.send(contacts);
+    return res.send({
+      count,
+      data: contacts
+    });
   },
   findOne: async (req, res) => {
     console.log('findOne');
