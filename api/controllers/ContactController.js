@@ -9,11 +9,26 @@ module.exports = {
   find: async (req, res) => {
     console.log('find');
     console.log('req.query', req.query);
-    let count = await Contact.count();
-    let contacts = await Contact.find({
+
+    let query = {
       skip: req.query.skip || 0,
       limit: req.query.limit || 10,
-    });
+      sort: req.query.sort || 'createdAt DESC'
+    };
+
+    if (req.query.search) {
+      const filterProps = ['firstname', 'lastname', 'email', 'phone'];
+      query.where = {or: []};
+      filterProps.forEach((prop) => {
+        let obj = {};
+        obj[prop] = {contains: req.query.search};
+        query.where.or.push(obj);
+      });
+    }
+
+    let contacts = await Contact.find(query);
+    let count = await Contact.count();
+
     return res.send({
       count,
       data: contacts
