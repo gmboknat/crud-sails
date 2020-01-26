@@ -2,10 +2,17 @@
 
 a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD operation. (https://crud-sails.herokuapp.com/)
 
+### Models:
+  _Contact Model_  
+
+| Property  | Data Type |
+| ------------- | ------------- |
+| lastname  | string  |
+| firstname  | string  |
+| email  | string  |
+| phone  | string  |
 
 ### API Endpoints: 
-
-
 |     Method     |           Endpoint            |       Description |
 |----------------|-------------------------------|-------------------------------|
 |GET             |/contact         | Get all contacts |
@@ -14,6 +21,13 @@ a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD opera
 |PUT            |/contact/:id   | Update a contact   |
 |DELETE            |/contact/:id   | Delete a contact by id |
 
+### Filtering
+```GET /contact?search=Apple``` - Search contact via firstname, lastname, phone or email which contains **_Apple_**
+
+### Pagination
+```GET /contact?skip=0&limit=10``` - Paginate by setting **_skip_** value which the index starts and the **_limit_** which sets how many records to fetch  
+**TODO***
+```GET /contact?page=2&limit=10``` - Paginate by setting the **_page_** value and the **_limit_**
 
 ### Links
 
