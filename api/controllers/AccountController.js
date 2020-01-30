@@ -30,7 +30,7 @@ module.exports = {
     }
 
     let accounts = await Account.find(query);
-    let count = await Account.count();
+    let count = await Account.count({where: query.where});
 
     return res.send({
       count,
