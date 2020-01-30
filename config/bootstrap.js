@@ -15,11 +15,11 @@ module.exports.bootstrap = async function() {
   // For example:
   // ```
   // Set up fake development data (or if we already have some, avast)
-  if ((await Contact.count()) > 0) {
+  if ((await Account.count()) > 0) {
     return;
   }
 
-  await Contact.createEach([
+  await Account.createEach([
     {
       firstname: 'Dean',
       lastname: 'Soto',

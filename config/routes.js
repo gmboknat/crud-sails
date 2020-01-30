@@ -9,10 +9,10 @@
  */
 
 module.exports.routes = {
-  'GET /contact': 'ContactController.find',
-  'GET /contact/:id': 'ContactController.findOne',
-  'POST /contact': 'ContactController.create',
-  'PUT /contact/:id' : 'ContactController.update',  
-  'DELETE /contact/:id' : 'ContactController.destroy'
+  'GET /account': 'AccountController.find',
+  'GET /account/:id': 'AccountController.findOne',
+  'POST /account': 'AccountController.create',
+  'PUT /account/:id' : 'AccountController.update',  
+  'DELETE /account/:id' : 'AccountController.destroy'
 
 };

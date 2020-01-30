@@ -12,8 +12,18 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    lastname: 'string',
-    firstname: 'string',
+    lastname: {
+      type: 'string',
+      required: true
+    },
+    firstname: {
+      type: 'string',
+      required: true
+    },
+    gender: {
+      type: 'string',
+      isIn: ['M', 'F']
+    },
     email: 'string',
     phone: 'string'
 

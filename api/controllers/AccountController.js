@@ -9,10 +9,13 @@ module.exports = {
   find: async (req, res) => {
     console.log('find');
     console.log('req.query', req.query);
+    let limit = req.query.limit || 10;
+    let skip = ((req.query.page || 1) - 1) * limit;
+
 
     let query = {
-      skip: req.query.skip || 0,
-      limit: req.query.limit || 10,
+      skip,
+      limit,
       sort: req.query.sort || 'createdAt DESC'
     };
 
@@ -26,36 +29,36 @@ module.exports = {
       });
     }
 
-    let contacts = await Contact.find(query);
-    let count = await Contact.count();
+    let accounts = await Account.find(query);
+    let count = await Account.count();
 
     return res.send({
       count,
-      data: contacts
+      data: accounts
     });
   },
   findOne: async (req, res) => {
     console.log('findOne');
     let id = req.param('id');
-    let contact = await Contact.findOne({ id: id });
-    return res.send(contact);
+    let account = await Account.findOne({ id: id });
+    return res.send(account);
   },
   create: async (req, res) => {
     console.log('create');
-    let contact = await Contact.create(req.body).fetch();
-    return res.send(contact);
+    let account = await Account.create(req.body).fetch();
+    return res.send(account);
   },
   update: async (req, res) => {
     console.log('update');
     let id = req.param('id');
     let newVavlues = req.body;
-    let updatedContact = await Contact.updateOne({ id }).set(newVavlues);
-    return res.send(updatedContact);
+    let updatedAccount = await Account.updateOne({ id }).set(newVavlues);
+    return res.send(updatedAccount);
   },
   destroy: async (req, res) => {
     console.log('destroy');
     let id = req.param('id');
-    let deletedContact = await Contact.destroyOne({ id });
-    return res.send(deletedContact);
+    let deletedAccount = await Account.destroyOne({ id });
+    return res.send(deletedAccount);
   }
 };
