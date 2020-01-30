@@ -3,31 +3,30 @@
 a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD operation. (https://crud-sails.herokuapp.com/)
 
 ### Models:
-  _Contact Model_  
+  _Account Model_  
 
 | Property  | Data Type |
 | ------------- | ------------- |
 | lastname  | string  |
 | firstname  | string  |
+| firstname  | string (m/f)  |
 | email  | string  |
 | phone  | string  |
 
 ### API Endpoints: 
 |     Method     |           Endpoint            |       Description |
 |----------------|-------------------------------|-------------------------------|
-|GET             |/contact         | Get all contacts |
-|GET              |/contact/:id           | Get a contact by id |
-|POST           |/contact      | Create a new contact |
-|PUT            |/contact/:id   | Update a contact   |
-|DELETE            |/contact/:id   | Delete a contact by id |
+|GET             |/account         | Get the first 10 records of account |
+|GET              |/account/:id           | Get an account by id |
+|POST           |/account      | Create a new account |
+|PUT            |/account/:id   | Update an account   |
+|DELETE            |/account/:id   | Delete an account by id |
 
 ### Filtering
 ```GET /contact?search=Apple``` - Search contact via firstname, lastname, phone or email which contains **_Apple_**
 
 ### Pagination
-```GET /contact?skip=0&limit=10``` - Paginate by setting **_skip_** value which the index starts and the **_limit_** which sets how many records to fetch  
-**TODO***
-```GET /contact?page=2&limit=10``` - Paginate by setting the **_page_** value and the **_limit_**
+```GET /contact?page=1&limit=10``` - Paginate by setting the **_page_** value and the **_limit_**
 
 ### Links
 
