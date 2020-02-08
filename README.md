@@ -9,7 +9,6 @@ a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD opera
 | ------------- | ------------- |
 | lastname  | string  |
 | firstname  | string  |
-| firstname  | string (m/f)  |
 | email  | string  |
 | phone  | string  |
 
@@ -23,10 +22,10 @@ a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD opera
 |DELETE            |/account/:id   | Delete an account by id |
 
 ### Filtering
-```GET /contact?search=Apple``` - Search contact via firstname, lastname, phone or email which contains **_Apple_**
+```GET /account?search=Apple``` - Search contact via firstname, lastname, phone or email which contains **_Apple_**
 
 ### Pagination
-```GET /contact?page=1&limit=10``` - Paginate by setting the **_page_** value and the **_limit_**
+```GET /account?page=1&limit=10``` - Paginate by setting the **_page_** value and the **_limit_**
 
 ### Links
 
