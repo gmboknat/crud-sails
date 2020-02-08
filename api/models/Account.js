@@ -20,12 +20,14 @@ module.exports = {
       type: 'string',
       required: true
     },
-    gender: {
+    email: {
       type: 'string',
-      isIn: ['M', 'F']
+      required: true
     },
-    email: 'string',
-    phone: 'string'
+    phone: {
+      type: 'string',
+      required: true
+    }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
