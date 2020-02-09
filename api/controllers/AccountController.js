@@ -16,7 +16,7 @@ module.exports = {
     let query = {
       skip,
       limit,
-      sort: req.query.sort || 'createdAt DESC'
+      sort: req.query.sort || 'createdAt ASC'
     };
 
     if (req.query.search) {
