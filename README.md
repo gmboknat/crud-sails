@@ -2,6 +2,9 @@
 
 a [Sails v1](https://sailsjs.com) application that demonstrates basic CRUD operation. (https://crud-sails.herokuapp.com/)
 
+### Account demo:
+admin@account.com : admin
+
 ### Models:
   _Account Model_  
 
